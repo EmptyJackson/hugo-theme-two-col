@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    {{ block "head" . }}
+    {{ partial "head.html" . }}
+    {{ end }}
+
+    {{ block "head_resources" . }}
+    <!-- Use this block to link to further resources like .js or .css files. -->
+    {{ end }}
+</head>
+
+<!-- <body class="d-flex flex-column min-vh-100 pt-2 pt-md-5"> -->
+<body class="d-flex flex-column min-vh-100">
+    {{ partial "header.html" . }}
+    <main>
+        <!-- <div class="row justify-content-center px-xs-0 px-sm-2 px-md-0"> -->
+        <div class="row justify-content-center">
+            <div class="col-7 col-sm-6 col-md-4 col-lg-3 col-xxl-2 px-sm-4">
+            <!-- <div class="col-9 col-md-5 col-lg-3 col-xxl-2 mx-sm-1 mx-4"> -->
+                <div class="sticky-top">
+                    <div class="pt-4 pt-sm-5">
+                        {{ block "left_col" . }}{{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 col-sm-10 col-md-6 col-lg-5 col-xxl-4 mt-md-5 px-sm-5">
+            {{ block "right_col" . }}{{ end }}
+            </div>
+        </div>
+    </main>
+    {{ partial "footer.html" . }}
+    {{ partial "script.html" . }}
+    <!-- Include custom JavaScript after jQuery and Bootstrap plugins -->
+    {{ block "page-scripts" . }}{{ end }}
+</body>
+</html>

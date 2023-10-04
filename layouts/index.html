@@ -1,0 +1,31 @@
+{{ define "left_col" }}
+{{ with .Site.Params }}
+<h2 class="page-title">{{ .fullName }}</h2>
+<p class="tagline mt-2 mb-2">{{ .tagline }}</p>
+<div class="justify-content-left">
+    <img src="{{ .profilePhoto }}" height="auto" alt="{{ .profilePhoto }}" focusable="false" loading="lazy"
+    class="img-fluid" />
+</div>
+{{ end }}
+<div class="mt-3">
+    {{ $headless := .Site.GetPage "/caption" }}
+    {{ $headless.Content }}
+</div>
+{{ end }}
+
+{{ define "right_col" }}
+<p class="">
+{{ .Content }}
+</p>
+<h2 class="section-title">Research</h2>
+{{ $headless := .Site.GetPage "/research" }}
+{{ $headless.Content }}
+<div class="album mt-3" id="topicCards">
+    {{ $headless := .Site.GetPage "/research" }}
+    {{ $researchPages := $headless.Resources.Match "*.md" }}
+    <!-- Sort papers by date -->
+    {{ range sort $researchPages ".Params.pubDate" "desc" }}
+        {{ partial "paper-card" . }}
+    {{ end }}
+</div>
+{{ end }}

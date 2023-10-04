@@ -1,0 +1,110 @@
+:root {
+    /* --link: #707070;
+    --link-hover: #505050; */
+    --link: #3273ff;
+    --link-hover: #0000BB;
+    --link-visited: #871fff;
+    --navbar: #005ef5;
+}
+
+body {
+    /* Padding to contain footer */
+    /* padding-bottom: 70px; */
+    height: 100%
+}
+
+.container {
+    padding: 0 150px
+}
+
+/* Remove annoying shadow on boostrap buttons */
+.btn-outline-secondary,
+.navbar-light .navbar-toggler {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+/*
+
+    Text
+
+*/
+
+html * {
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Albert Sans', sans-serif; */
+    font-family: 'Tajawal', sans-serif;
+}
+
+h1, h2, h3 {
+    /* font-family: 'Bodoni Moda', serif; */
+    /* font-family: 'GFS Didot', serif; */
+    font-family: 'DM Serif Display', serif;
+    /* font-family: 'Gloock', serif; */
+    /* font-family: 'Prata', serif; */
+}
+
+p {
+    font-weight: 400;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 20pt;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a:hover {
+    color: var(--link-hover);
+    font-weight: 700;
+}
+
+.page-title {
+    /* margin-top: 5vh; */
+    /* margin-bottom: 2vh; */
+}
+
+.tagline {
+    font-style: italic;
+}
+
+.paper-body {
+    line-height: normal;
+}
+
+.paper-title {
+    /* margin-top: 5vh; */
+    margin-bottom: 2pt;
+    /* margin-bottom: 1vh; */
+    font-size: 14pt;
+    /* font-weight: 400; */
+}
+
+.paper-authors{
+    margin-bottom: 1pt;
+}
+
+.paper-venue {
+    /* margin-bottom: auto; */
+    font-style: italic;
+}
+
+.paper-links {
+    font-style: normal;
+}

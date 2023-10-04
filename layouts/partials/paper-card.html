@@ -1,0 +1,20 @@
+<div class="card border-0 slide-fade-in">
+    <div class="row d-flex align-items-center">
+        <div class="col col-12 align-items-center">
+            <div class="paper-body">
+                <!-- <a href="{{ .Params.link }}"> -->
+                    <!-- <h3 class="paper-title hover-underline-animation">{{ .Params.title }}</h3> -->
+                    <!-- <p class="paper-title">{{ .Params.title }}</p> -->
+                <!-- </a> -->
+                <p class="paper-title">{{ .Params.title }}</p>
+                <p class="paper-authors">{{ delimit .Params.authors ", " }}</p>
+                <p class="paper-venue">
+                    {{ .Params.venue }}
+                    {{ if .Params.link }}
+                    &nbsp&nbsp<a href="{{ .Params.link }}" class="paper-links">paper</a>
+                    {{ end }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
