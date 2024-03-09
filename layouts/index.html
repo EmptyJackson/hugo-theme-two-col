@@ -28,4 +28,15 @@
         {{ partial "paper-card" . }}
     {{ end }}
 </div>
+<h2 class="section-title">Further Publications</h2>
+{{ $headless := .Site.GetPage "/further" }}
+{{ $headless.Content }}
+<div class="album mt-3" id="topicCards">
+    {{ $headless := .Site.GetPage "/further" }}
+    {{ $researchPages := $headless.Resources.Match "*.md" }}
+    <!-- Sort papers by date -->
+    {{ range sort $researchPages ".Params.pubDate" "desc" }}
+    {{ partial "paper-card" . }}
+    {{ end }}
+</div>
 {{ end }}
