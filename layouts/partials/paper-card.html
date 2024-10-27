@@ -1,4 +1,4 @@
-<div class="card border-0 slide-fade-in mb-2">
+<div class="card border-0 mb-2">
     <div class="row d-flex align-items-center">
         <div class="col col-12 align-items-center">
             <div class="paper-body">
@@ -12,6 +12,9 @@
                     {{ .Params.venue }}
                     {{ if .Params.link }}
                     &nbsp&nbsp<a href="{{ .Params.link }}" class="paper-links">paper</a>
+                    {{ end }}
+                    {{ if .Params.podcast }}
+                    &nbsp&nbsp<a href="{{ .Params.link }}" class="paper-links">podcast</a>
                     {{ end }}
                 </p>
             </div>
